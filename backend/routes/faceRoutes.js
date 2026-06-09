@@ -13,4 +13,10 @@ router.get('/models', faceController.checkModels);
 // Delete uploaded image
 router.delete('/image/:fileName', faceController.deleteImage);
 
+// Training endpoints
+router.post('/train', faceController.trainModel);
+router.post('/recognize', faceController.recognizeFaces);
+router.get('/trained-faces', faceController.getTrainedFaces);
+router.post('/clear-model', faceController.clearModel);
+
 module.exports = router;
